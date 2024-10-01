@@ -1,0 +1,40 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #483C32;
+    background-color: #D0E0D0;
+}
+
+#main-content {
+    background-color: #FFFFF0;
+}
+
+h1, h2 {
+    color: #483C32;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    text-align: center;
+}
+
+.emphasis {
+    color: #557eb4;
+    font-weight: bold;
+}
+
+.de-emphasis {
+    color: #8B8589; 
+    font-style: italic;
+}
+
+span.highlight {
+    background-color: #F08080;
+    color: #FFFFF0; 
+}
+
+a {
+    color: #557eb4; 
+}
+
+footer {
+    text-align: center;
+    color: #483C32; 
+}
