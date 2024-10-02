@@ -1,0 +1,8 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(101, 83, 153);
+}
+#waves {
+    height: 360px;
+    width: 640px;
+}
