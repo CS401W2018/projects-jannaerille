@@ -1,0 +1,19 @@
+body {
+    color: chocolate;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('brown.jpg');
+    background-color: bisque;
+}
+
+header {
+    background-position: middle;
+    background-image: url("flower.png");
+}
+
+nav a {
+    color: brown;
+}
+
+.current {
+    color: burlywood;
+}
