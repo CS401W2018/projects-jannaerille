@@ -1,0 +1,33 @@
+nav a {
+    color: rgba(50, 3, 3, 0.837);
+}
+
+.current {
+    color: rgb(190, 144, 84);
+} 
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg1.jpg');
+    color: #333;
+    
+}
+
+header, nav, main, footer {
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-image: url('phflag.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+
+.tour-list {
+    list-style-image: url('ph.png');
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
