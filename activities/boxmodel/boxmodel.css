@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 50px 50px 50px;
+}
+
+#wrapper {
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgb(244, 231, 215);
+    border: thin solid black;
+}
+
+header {
+    background-color: rgb(235, 199, 158);
+    width: 300px;
+    margin: 50px auto;
+    padding: 50px 30px 100px 3px;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+nav {
+    background-color: beige;
+    height: 200px;
+}
