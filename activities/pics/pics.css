@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:cornsilk;
+    margin: 20px;
+    padding: auto;    
+}
+
+header {
+    /* width: 300px; */
+    background-color: beige;
+    text-align: center;
+    padding: 5px;
+}
+
+nav {
+    width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 30px;
+    border-bottom: thin solid cornsilk;
+}
+
+#dogpic {
+    width: auto;
+    float: inline-end;
+    border: thin solid black;
+}
+
+#dogpic img {
+    width: 250 px;
+}
+
+.clear {
+    clear:both
+}
+
+figcaption {
+    text-align: center;
+}
+
+a {
+    color: brown;
+}
