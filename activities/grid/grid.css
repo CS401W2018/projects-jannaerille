@@ -1,0 +1,15 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    background-color: lightpink;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+    background-color: mistyrose;
+    border: thin solid lightcoral;
+}
