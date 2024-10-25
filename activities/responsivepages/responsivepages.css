@@ -28,7 +28,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    display: block;
+    display: flex;
     padding: 5px;
 }
 
@@ -53,8 +53,18 @@ nav ul li a {
     width: 100%;
 }
 
-@media only screen and (max-width:600px) {
-    body {
-        background-color: bisque;
+@media only screen and (max-width: 650px) {
+    nav {
+        flex-direction: column;
     }
+
+    nav a {
+        border-bottom: thin solid #fff;
+
+    }
+
+    .card {
+        width: 100%;
+    }
+
 }
