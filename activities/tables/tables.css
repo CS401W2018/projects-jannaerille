@@ -17,4 +17,13 @@ body {
 
 .schedule thead {
     background-color: bisque;
+
+}
+
+.schedule tfoot {
+    background-color: rgb(245, 235, 220);
+}
+
+.schedule tbody tr:nth-child(odd) {
+    background-color:cornsilk
 }
