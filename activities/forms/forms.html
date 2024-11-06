@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel = "stylesheet" href = "forms.css">
+</head>
+<body>
+    <header>
+        <h1>Web Design</h1>
+    </header>
+    <main>
+        <form action="processing.html" method = "post">
+            First Name: <input type="text" name ="first" required><br>
+            Last Name: <input type ="text" name = "last" placeholder="Last Name"><br>
+            Password: <input type="password" name = "pass"><br>
+            <input type = "checkbox" name = "rember"> Remember Me <br>
+            Grade:<br>
+            <input type="radio" name="grade" value = "Freshman"> Freshman <br>
+            <input type="radio" name="grade" value = "Freshman"> Sophomore <br>
+            <input type="radio" name="grade" value = "Freshman"> Junior <br>
+            <input type="radio" name="grade" value = "Freshman"> Senior <br>
+            <select name ="state" id="state">
+                <option value="Hawaii">Hawaii</option>
+                <option value="California">California</option>
+                <option value="Utah">Utah</option>
+                <option value="Colorado">Colorado</option>
+            </select><br>
+            <textarea name="message" rows="10" cols="30">Type in your message...
+            </textarea><br>
+            <input type="submit">
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
+        </form>
+        <h3>Engagement Questions:</h3>
+        <h4>1. The form tag has an "action" attribute. What does it do?</h4>
+        <p>The "action" attribute in an HTML form tag specifies <strong>where</strong> the form data should be sent when the form is submitted.</p>
+        <h4>2. The form tag has a "method" attribute. What does it do?</h4>
+        <p>The "method" attribute in an HTML form tag specifies <strong>how</strong> the form data should be sent to the server when the form is submitted. It could be GET or POST</p>
+        <h4>3. What is the difference between a "POST" and a "GET"?</h4>
+        <p>When we do a GET method, all the information goes up to the URL, it is for reading information. POST is adding or changing information.</p>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Jann Aerille Perez</p>
+    </footer>
+</body>
+</html>
