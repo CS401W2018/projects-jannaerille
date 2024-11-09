@@ -12,34 +12,60 @@
     </header>
     <main>
         <form action="processing.html" method = "post">
-            First Name: <input type="text" name ="first" required><br>
-            Last Name: <input type ="text" name = "last" placeholder="Last Name"><br>
-            Password: <input type="password" name = "pass"><br>
-            <input type = "checkbox" name = "rember"> Remember Me <br>
-            Grade:<br>
-            <input type="radio" name="grade" value = "Freshman"> Freshman <br>
-            <input type="radio" name="grade" value = "Freshman"> Sophomore <br>
-            <input type="radio" name="grade" value = "Freshman"> Junior <br>
-            <input type="radio" name="grade" value = "Freshman"> Senior <br>
-            <select name ="state" id="state">
-                <option value="Hawaii">Hawaii</option>
-                <option value="California">California</option>
-                <option value="Utah">Utah</option>
-                <option value="Colorado">Colorado</option>
-            </select><br>
-            <textarea name="message" rows="10" cols="30">Type in your message...
-            </textarea><br>
-            <input type="submit">
-            <button type="button" onclick="alert('Hello World!')">Click Me!</button><br>
+            <fieldset>
+                <legend>Sign Up</legend>
+                <div class = "form-row">
+                    <label for = "fname">First Name: </label>
+                    <input id = "fname" type="text" name ="first" required>
+                </div>
+                <div class = "form-row">
+                    <label for = "lname">Last Name: </label>
+                    <input id = "lname" type = "text" name = "last" placeholder="Last Name">
+                </div>
+                <div class = "form-row">
+                    <label for = "pass">Password: </label>
+                    <input id = "pass" type="password" name = "pass">
+                </div>
+                <div class = "check-row">
+                    <div class="spacer"></div>
+                    <label>
+                        <input type = "checkbox" name = "remember"> Remember Me
+                    </label>
+                </div>
+                <div class = "check-row">
+                    <div class = "spacer"></div>
+                    Class:
+                    <label><input type="radio" name="class" value = "Freshman"> Freshman </label>
+                    <label><input type="radio" name="class" value = "Sophomore"> Sophomore </label>
+                    <label><input type="radio" name="class" value = "Junior"> Junior </label>
+                    <label><input type="radio" name="class" value = "Senior"> Senior </label>
+                </div>
+                <div class = "form-row">
+                    <label for="state"> State: </label>
+                    <select name ="state" id="state">
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="California">California</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Colorado">Colorado</option>
+                    </select>
+                </div>
+                <div class = "form-row">
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" >Type in your comment...
+                    </textarea>
+                </div>
+                <div class = "form-row">
+                    <div class ="spacer"></div>
+                    <input type="submit">
+                    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+                </div>
+            </fieldset>
         </form>
         <h3>Engagement Questions:</h3>
-        <h4>1. The form tag has an "action" attribute. What does it do?</h4>
-        <p>The "action" attribute in an HTML form tag specifies <strong>where</strong> the form data should be sent when the form is submitted.</p>
-        <h4>2. The form tag has a "method" attribute. What does it do?</h4>
-        <p>The "method" attribute in an HTML form tag specifies <strong>how</strong> the form data should be sent to the server when the form is submitted. It could be GET or POST</p>
-        <h4>3. What is the difference between a "POST" and a "GET"?</h4>
-        <p>When we do a GET method, all the information goes up to the URL, it is for reading information. POST is adding or changing information.</p>
-
+        <h4>1. What are different ways to style your form?</h4>
+        <p>You can do basic styling through CSS. You can also use :focus states to change styles when input is selected. You can also use CSS Grid or CSS Flex.</p>
+        <h4>2. Why does the professor like to use flex?</h4>
+        <p>Perhaps Flex has the ability to create responsive, efficient, and visually appealing layouts with less complexity than traditional methods.</p>
     </main>
     <footer>
         <p>&copy; 2024 Jann Aerille Perez</p>
