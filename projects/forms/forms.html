@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets Purchasing</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Tickets Pre-Sale</h1>
+    </header>
+
+    <main>
+        <form action="processing.html" method="post">
+            <div class="form-row">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-row">
+                <label for="password">Verify Password:</label>
+                <input type="password" id="password-verify" name="password" required>
+            </div>
+
+            <div class="form-row">
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-row">
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">Select a ticket type</option>
+                    <option value="regular">Regular</option>
+                    <option value="VIP">VIP</option>
+                    <option value="group">Group (5+ people)</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Movie:</legend>
+                <div class="form-group">
+                    <label>Select which movie you want to watch:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="moana2" name="movie" value="moana2">
+                        <label for="moana2">Moana 2</label>
+                        <input type="radio" id="wicked" name="movie" value="wicked">
+                        <label for="wicked">Wicked</label>
+                        <input type="radio" id="betelgeuse" name="movie" value="betelgeuse">
+                        <label for="betelgeuse">Beetlejuice</label>
+                        <input type="radio" id="smile2" name="movie" value="smile2">
+                        <label for="smile2">Smile 2</label>
+                        <input type="radio" id="heretic" name="movie" value="heretic">
+                        <label for="heretic">Heretic</label>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Snacks and Drinks: </legend>
+                <div class="form-group">
+                    <label>Select all that you want:</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="popcorn" name="snack" value="popcorn">
+                        <label for="popcorn">Popcorn</label>
+                        <input type="checkbox" id="fries" name="snack" value="fries">
+                        <label for="fries">French Fries</label>
+                        <input type="checkbox" id="taters" name="snack" value="taters">
+                        <label for="taters">Tater-tots</label>
+                        <input type="checkbox" id="hotdog" name="snack" value="hotdog">
+                        <label for="hotdog">Hotdog</label>
+                        <input type="checkbox" id="soda" name="snack" value="soda">
+                        <label for="soda">Soda</label>
+                        <input type="checkbox" id="water" name="snack" value="water">
+                        <label for="water">Water</label>
+                        <input type="checkbox" id="juice" name="snack" value="juice">
+                        <label for="juice">Juice</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Checkout</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jann Aerille Perez</p>
+    </footer>
+</body>
+</html>
