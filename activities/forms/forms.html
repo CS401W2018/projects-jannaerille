@@ -11,20 +11,24 @@
         <h1>Web Design</h1>
     </header>
     <main>
-        <form action="processing.html" method = "post">
+        <form action="processing.html" method = "post" id="myForm">
             <fieldset>
                 <legend>Sign Up</legend>
                 <div class = "form-row">
                     <label for = "fname">First Name: </label>
-                    <input id = "fname" type="text" name ="first" required>
+                    <input id = "firstName" type="text" name ="first">
                 </div>
                 <div class = "form-row">
                     <label for = "lname">Last Name: </label>
-                    <input id = "lname" type = "text" name = "last" placeholder="Last Name">
+                    <input id = "lastName" type = "text" name = "last" placeholder="Last Name">
                 </div>
                 <div class = "form-row">
                     <label for = "pass">Password: </label>
                     <input id = "pass" type="password" name = "pass">
+                </div>
+                <div class = "form-row">
+                    <label for = "age">Age </label>
+                    <input id = "age" type = "number" name = "age">
                 </div>
                 <div class = "check-row">
                     <div class="spacer"></div>
@@ -62,13 +66,43 @@
             </fieldset>
         </form>
         <h3>Engagement Questions:</h3>
-        <h4>1. What are different ways to style your form?</h4>
-        <p>You can do basic styling through CSS. You can also use :focus states to change styles when input is selected. You can also use CSS Grid or CSS Flex.</p>
-        <h4>2. Why does the professor like to use flex?</h4>
-        <p>Perhaps Flex has the ability to create responsive, efficient, and visually appealing layouts with less complexity than traditional methods.</p>
+        <h4>1. What is JavaScript? How did it get its name?</h4>
+        <p>JavaScript is a scripting language that allows developers to implement complex features on webpages. It's the third layer of standard web technologies, alongside HTML and CSS.</p>
+        <p>JavaScript was originally called "Mocha", then "LiveScript" when it was developed by Netscape in 1995. It was renamed to JavaScript, likely as a marketing tactic to capitalize on the popularity of Java at the time. Despite the similar names, JavaScript is not related to Java. </p>
+        <h4>2. What are the two ways you can run JavaScript?</h4>
+        <p>JavaScript can be run by client-side in web browsers or server-side using Node.js or similar runtime environments. </p>
+        <h4>3. What was the most popular front-end js library?</h4>
+        <p>jQuery was the most popular library.</p>
+        <h4>4. What is the most popular front-end js library?</h4>
+        <p>Now, React is the most popular.</p>
     </main>
     <footer>
         <p>&copy; 2024 Jann Aerille Perez</p>
     </footer>
+    <script>
+        document.getElementById("myForm").addEventListener("submit",function(event) {
+            event.preventDefault();
+            const first = document.getElementById("firstName").value;
+            const last = document.getElementById("lastName").value;
+            const age = document.getElementById("age").value;
+
+            if (!first || !last) {
+                alert("Please provide your full name.");
+                return;
+            }
+
+            if (!age || age <= 18) {
+                alert("You must be 18 years or older to submit this form.");
+                return;
+            }
+
+            const data = {
+                firstName: first,
+                lastName: last
+            }
+            
+            console.log(data);;
+        });
+    </script>
 </body>
 </html>
