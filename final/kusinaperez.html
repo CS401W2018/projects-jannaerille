@@ -15,8 +15,8 @@
             <li><a href = "kusinaperez.html" class = current>Home</a></li>
             <li><a href = "humba.html" >Humba</a></li>
             <li><a href = "bulalo.html" >Bulalo</a></li>
-            <li><a href = "#" >Pancit Canton</a></li>
-            <li><a href = "#" >Tortang Talong</a></li>
+            <li><a href = "pancit.html" >Pancit Canton</a></li>
+            <li><a href = "talong.html" >Tortang Talong</a></li>
             <li><a href = "#" >Ginataang Kalabasa</a></li>
         </ul>
     </nav>
@@ -41,29 +41,58 @@
                 <article>
                     <h2>Pancit Canton</h2>
                     <img src="pancit.jpg" alt="Pancit Canton">
-                    <p>Pancit Canton is a delicious and vibrant Filipino noodle dish that combines the best of Chinese and Filipino culinary traditions.</p>
+                    <p>Pancit Canton is a mouthwatering Filipino stir-fried noodle dish that will transport your taste buds to the vibrant streets of Manila.</p>
                 </article>
             </div>
-        <aside>
-            <section id="registration">
-                <h2>Register for Updates</h2>
-                <form action="#" method="post">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" id="first-name" name="first-name"><br><br>
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" id="last-name" name="last-name"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    <label for="feedback">Feedback/Suggestions:</label>
-                    <textarea id="feedback" name="feedback"></textarea><br><br>
-                    <input type="submit" value="Register">
-                </form>
-            </section>
-        </aside>
-    </main>
-    </div>
-    <footer>
-        <p>&copy; 2024 Jann Aerille Perez</p>
-    </footer>
+            <aside>
+                <section id="registration">
+                    <h2>Register for Updates</h2>
+                    <form id="myForm" action="formprocessing.php" method="post">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName"><br><br>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName"><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age"><br><br>
+                        <label for="feedback">Feedback/Suggestions:</label>
+                        <textarea id="feedback" name="feedback"></textarea><br><br>
+                        <input type="submit" value="Register">
+                    </form>
+                    <div id="message"></div>
+                </section>
+            </aside>
+            
+            <script>
+                document.getElementById("myForm").addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    const formData = new FormData(this);
+
+                    const xhr = new XMLHttpRequest();
+                    xhr.open("POST", "formprocessing.php", true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            try {
+                                if (xhr.status === 200) {
+                                    const response = JSON.parse(xhr.responseText);
+                                    document.getElementById("message").innerHTML = response.message;
+                                    
+                                    // Optional: Clear form on successful submission
+                                    if (response.status === 'success') {
+                                        event.target.reset();
+                                    }
+                                } else {
+                                    throw new Error('Server returned an error status');
+                                }
+                            } catch (error) {
+                                console.error('Error processing form:', error);
+                                document.getElementById("message").innerHTML = 'An error occurred. Please try again.';
+                            }
+                        }
+                    };
+                    xhr.send(formData);
+                });
+            </script>
 </body>
 </html>
