@@ -63,36 +63,5 @@
                     <div id="message"></div>
                 </section>
             </aside>
-            
-            <script>
-                document.getElementById("myForm").addEventListener("submit", function(event) {
-                    event.preventDefault();
-                    const formData = new FormData(this);
-
-                    const xhr = new XMLHttpRequest();
-                    xhr.open("POST", "formprocessing.php", true);
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4) {
-                            try {
-                                if (xhr.status === 200) {
-                                    const response = JSON.parse(xhr.responseText);
-                                    document.getElementById("message").innerHTML = response.message;
-                                    
-                                    // Optional: Clear form on successful submission
-                                    if (response.status === 'success') {
-                                        event.target.reset();
-                                    }
-                                } else {
-                                    throw new Error('Server returned an error status');
-                                }
-                            } catch (error) {
-                                console.error('Error processing form:', error);
-                                document.getElementById("message").innerHTML = 'An error occurred. Please try again.';
-                            }
-                        }
-                    };
-                    xhr.send(formData);
-                });
-            </script>
 </body>
 </html>

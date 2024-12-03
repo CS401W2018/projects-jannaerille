@@ -11,6 +11,7 @@
             <p>First Name: <?php print $_POST['firstName'] ?></p>
             <p>Last Name: <?php print $_POST['lastName'] ?></p>
             <p>Email: <?php print $_POST['email'] ?></p>
+            <p>Age: <?php print $_POST['age'] ?></p>
             <p>Feedback: <?php print $_POST['feedback'] ?></p>
         </main>
     </body>
