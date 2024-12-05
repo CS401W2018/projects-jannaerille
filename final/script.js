@@ -15,7 +15,8 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 
     console.log(data);
 
-    makeAjaxCall(data);
+    // Navigate to form processing page with form data in URL
+    window.location.href = 'formprocessing.html?' + new URLSearchParams(data).toString();
 });
 
 function validateForm(data) {
@@ -42,21 +43,4 @@ function validateForm(data) {
     }
 
     return errors;
-}
-
-function makeAjaxCall(data) {
-    const xhr = new XMLHttpRequest();
-    // Use GET for GitHub hosting or other static servers
-    xhr.open('GET', 'formprocessing.html?' + new URLSearchParams(data).toString(), true);
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            document.getElementById('message').innerHTML = 'Form submitted successfully!';
-            document.getElementById('message').style.color = 'green';
-            document.getElementById('myForm').reset();
-        } else {
-            document.getElementById('message').innerHTML = 'Error: ' + xhr.statusText;
-            document.getElementById('message').style.color = 'red';
-        }
-    };
-    xhr.send();
 }
