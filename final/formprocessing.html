@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kusina Perez</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <script>
+            window.onload = function() {
+                const params = new URLSearchParams(window.location.search);
+                let formData = '';
+                for(const [key, value] of params) {
+                    formData += `<li><strong>${key}:</strong> ${value}</li>`;
+                }
+                document.getElementById('formData').innerHTML = formData;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Kusina Perez</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href = "kusinaperez.html" class = current>Home</a></li>
+                <li><a href = "humba.html" >Humba</a></li>
+                <li><a href = "bulalo.html" >Bulalo</a></li>
+                <li><a href = "pancit.html" >Pancit Canton</a></li>
+                <li><a href = "talong.html" >Tortang Talong</a></li>
+                <li><a href = "#" >Ginataang Kalabasa</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Thank you for registering!</h2>
+        <p>Here's the information you submitted:</p>
+        <ul id="formData">
+            <!-- Form data will be inserted here by JavaScript -->
+        </ul>
+        <p><a href="kusinaperez.html">Return to Home</a></p>
+        </main>
+        <footer>
+            <p>&copy; 2024 Jann Aerille Perez</p>
+        </footer>
+</body>
+</html>
